@@ -1,0 +1,2 @@
+ALTER TABLE user
+ADD UNIQUE (login);
