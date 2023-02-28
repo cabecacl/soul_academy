@@ -1,6 +1,6 @@
 package br.com.soul_academy.infra.security;
 
-import br.com.soul_academy.domain.user.UserDetailsRepository;
+import br.com.soul_academy.repository.UserDetailsRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
