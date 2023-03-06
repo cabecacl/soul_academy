@@ -219,11 +219,11 @@ public interface IPeopleController {
                                       @RequestParam String name,
                                       @RequestParam String registrationNumber);
 
-    @Operation(summary = "Realiza a inclusão de uma pessoa.")
+    @Operation(summary = "Realiza a exclusão de uma pessoa.")
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "201",
-                    description = "Caso a inclusão ocorra com sucesso.",
+                    description = "Caso a exclusão ocorra com sucesso.",
                     content = @Content(
                             mediaType = "application/json",
                             examples = @ExampleObject(

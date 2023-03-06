@@ -14,7 +14,7 @@ public class DeletePeopleService {
     private final PeopleRepository repository;
     private final String PESSOA_NAO_LOCALIZADA = "Pessoa não localizada.";
 
-    public void execute(Long id) {
+    public void delete(Long id) {
         var people = repository.findById(id)
                 .orElseThrow(() -> new NoResultException(PESSOA_NAO_LOCALIZADA));
 

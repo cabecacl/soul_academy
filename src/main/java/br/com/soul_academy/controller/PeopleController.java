@@ -59,7 +59,7 @@ public class PeopleController implements IPeopleController {
 
     @Override
     public ResponseEntity<Object> delete(@RequestParam Long id) {
-        deletePeopleService.execute(id);
+        deletePeopleService.delete(id);
         return ResponseEntity.status(HttpStatus.OK).body(singletonMap("message", "Repasse/Sangria deletado com sucesso."));
     }
 
