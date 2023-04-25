@@ -28,7 +28,7 @@ jobs:
   
     - name: Cache Maven de packages para melhorar build
       uses: actions/cache@v1
-        with:
+      with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2  
