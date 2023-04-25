@@ -10,11 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      DB_DATABASE: soul_academy
-      DB_USER: cleiton
-      DB_PASSWORD: 12345
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
@@ -24,17 +19,19 @@ jobs:
         distribution: 'temurin'
         cache: maven
       
-    - name: Set up MySQL
-      run: 
-        sudo /etc/init.d/mysql start
-        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
-      
+    - uses: mirromutth/mysql-action@v1.1
+      with:
+        mysql database: 'soul_academy' # Optional, default value is "test". The specified database which will be create
+        mysql root password: ${{ secrets.RootPassword }} # Required if "mysql user" is empty, default is empty. The root superuser password
+        mysql user: 'cleiton'
+        mysql password: '12345'
+  
     - name: Cache Maven de packages para melhorar build
       uses: actions/cache@v1
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2  
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2  
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
