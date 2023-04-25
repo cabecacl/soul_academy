@@ -21,8 +21,8 @@ jobs:
       
     - uses: mirromutth/mysql-action@v1.1
       with:
-        mysql database: 'soul_academy' # Optional, default value is "test". The specified database which will be create
-        mysql root password: ${{ secrets.RootPassword }} # Required if "mysql user" is empty, default is empty. The root superuser password
+        mysql database: 'soul_academy' 
+        mysql root password: 'root'
         mysql user: 'cleiton'
         mysql password: '12345'
   
