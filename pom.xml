@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.soul_academy</groupId>
 	<artifactId>soul_academy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>soul_academy</name>
 	<description>Soul Academy é um sistema de gestão de academia em geral</description>
 	<properties>
