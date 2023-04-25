@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DB_DATABASE: test_db
-      DB_USER: root
-      DB_PASSWORD: root
+      DB_DATABASE: soul_academy
+      DB_USER: cleiton
+      DB_PASSWORD: 12345
 
     steps:
     - uses: actions/checkout@v3
