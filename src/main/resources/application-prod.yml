@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://host.docker.internal:3306/soul_academy
     username: cleiton
     password: 12345
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
