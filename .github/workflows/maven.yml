@@ -41,8 +41,10 @@ jobs:
     - name: Create-DB
       run: docker-compose up -d
       
-    - name: Build-DB
-      run: docker-compose build
+    #- name: Build-DB
+    #  run: docker-compose build
+    - name: Build Soul
+      run: docker build -t soul-academy .
     
   docker:
     needs: build
