@@ -2,9 +2,9 @@ name: Java CI com Maven
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "hotfix/Ajuste_EC2" ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ "hotfix/Ajuste_EC2" ]
 
 jobs:
   build:
