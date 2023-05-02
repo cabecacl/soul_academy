@@ -1,0 +1,12 @@
+#db-docker producao EC2
+spring:
+  datasource:
+    #url: jdbc:mysql://host.docker.internal:3306/soul_academy
+    url: jdbc:mysql://${DBHOST}:${DBPORT}/${DBNAME}
+    username: ${DBUSER}
+    password: ${DBPASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
