@@ -16,7 +16,7 @@ jobs:
       with:
         # Artifact name
         name: soul_academy
-        path: target/soul_academy-0.1.0-SNAPSHOT.jar
+        path: soul_academy-0.1.0-SNAPSHOT.jar
     
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@main
